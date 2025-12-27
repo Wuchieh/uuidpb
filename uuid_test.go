@@ -12,6 +12,23 @@ func TestUUID_AsUUID(t *testing.T) {
 	if uid.AsUUID() != uuid.Nil {
 		t.Errorf("AsUUID returned a non-nil UUID")
 	}
+
+	var uid2 *uuidpb.UUID
+	if uid2.AsUUID() != uuid.Nil {
+		t.Errorf("AsUUID returned a non-nil UUID")
+	}
+}
+
+func TestUUID_AsNullUUID(t *testing.T) {
+	uid := uuidpb.UUID{}
+	if nuid := uid.AsNullUUID(); !nuid.Valid {
+		t.Errorf("AsUUID returned a non-nil UUID")
+	}
+
+	var uid2 *uuidpb.UUID
+	if nuid := uid2.AsNullUUID(); nuid.Valid {
+		t.Errorf("AsUUID returned a non-nil UUID")
+	}
 }
 
 func TestNew(t *testing.T) {
