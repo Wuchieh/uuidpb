@@ -5,6 +5,9 @@ import (
 )
 
 func (u *UUID) AsUUID() uuid.UUID {
+	if u == nil {
+		return uuid.Nil
+	}
 	var val [16]byte
 	copy(val[:], u.Value)
 	return val
