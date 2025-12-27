@@ -13,6 +13,13 @@ func (u *UUID) AsUUID() uuid.UUID {
 	return val
 }
 
+func (u *UUID) AsNullUUID() uuid.NullUUID {
+	return uuid.NullUUID{
+		UUID:  u.AsUUID(),
+		Valid: u != nil,
+	}
+}
+
 func New(val uuid.UUID) UUID {
 	return UUID{
 		Value: val[:],
