@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package uuidpb.v1;
+
+option go_package = "github.com/wuchieh/uuidpb;uuidpb";
+
+message UUID {
+  bytes value = 1; // 16 bytes UUID
+}
