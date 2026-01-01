@@ -1,4 +1,4 @@
-.PHONY: all lint generate format
+.PHONY: all generate format
 
 all: format generate
 
