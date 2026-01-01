@@ -11,6 +11,8 @@ lint:
 
 generate:
 	buf generate
+	mv wuchieh/protobuf/* .
+	rm -rf wuchieh
 
 format:
 	buf format -w .

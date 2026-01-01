@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package wuchieh.uuidpb;
+package wuchieh.protobuf;
 
 option go_package = "github.com/wuchieh/uuidpb";
 
