@@ -1,10 +1,13 @@
-.PHONY: all generate format
+.PHONY: all lint generate format
 
-all: format generate
+all: format lint generate
 
 gen: generate
 
 fmt: format
+
+lint:
+	buf lint
 
 generate:
 	buf generate
