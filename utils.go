@@ -20,8 +20,8 @@ func (u *UUID) AsNullUUID() uuid.NullUUID {
 	}
 }
 
-func New(val uuid.UUID) UUID {
-	return UUID{
+func New(val uuid.UUID) *UUID {
+	return &UUID{
 		Value: val[:],
 	}
 }
