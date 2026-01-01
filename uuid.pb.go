@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.11
 // 	protoc        (unknown)
-// source: uuidpb/v1/uuid.proto
+// source: uuid.proto
 
 package uuidpb
 
@@ -30,7 +30,7 @@ type UUID struct {
 
 func (x *UUID) Reset() {
 	*x = UUID{}
-	mi := &file_uuidpb_v1_uuid_proto_msgTypes[0]
+	mi := &file_uuid_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -42,7 +42,7 @@ func (x *UUID) String() string {
 func (*UUID) ProtoMessage() {}
 
 func (x *UUID) ProtoReflect() protoreflect.Message {
-	mi := &file_uuidpb_v1_uuid_proto_msgTypes[0]
+	mi := &file_uuid_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +55,7 @@ func (x *UUID) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UUID.ProtoReflect.Descriptor instead.
 func (*UUID) Descriptor() ([]byte, []int) {
-	return file_uuidpb_v1_uuid_proto_rawDescGZIP(), []int{0}
+	return file_uuid_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *UUID) GetValue() []byte {
@@ -65,31 +65,32 @@ func (x *UUID) GetValue() []byte {
 	return nil
 }
 
-var File_uuidpb_v1_uuid_proto protoreflect.FileDescriptor
+var File_uuid_proto protoreflect.FileDescriptor
 
-const file_uuidpb_v1_uuid_proto_rawDesc = "" +
+const file_uuid_proto_rawDesc = "" +
 	"\n" +
-	"\x14uuidpb/v1/uuid.proto\x12\tuuidpb.v1\"\x1c\n" +
+	"\n" +
+	"uuid.proto\x12\x0ewuchieh.uuidpb\"\x1c\n" +
 	"\x04UUID\x12\x14\n" +
 	"\x05value\x18\x01 \x01(\fR\x05valueB\x1bZ\x19github.com/wuchieh/uuidpbb\x06proto3"
 
 var (
-	file_uuidpb_v1_uuid_proto_rawDescOnce sync.Once
-	file_uuidpb_v1_uuid_proto_rawDescData []byte
+	file_uuid_proto_rawDescOnce sync.Once
+	file_uuid_proto_rawDescData []byte
 )
 
-func file_uuidpb_v1_uuid_proto_rawDescGZIP() []byte {
-	file_uuidpb_v1_uuid_proto_rawDescOnce.Do(func() {
-		file_uuidpb_v1_uuid_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_uuidpb_v1_uuid_proto_rawDesc), len(file_uuidpb_v1_uuid_proto_rawDesc)))
+func file_uuid_proto_rawDescGZIP() []byte {
+	file_uuid_proto_rawDescOnce.Do(func() {
+		file_uuid_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_uuid_proto_rawDesc), len(file_uuid_proto_rawDesc)))
 	})
-	return file_uuidpb_v1_uuid_proto_rawDescData
+	return file_uuid_proto_rawDescData
 }
 
-var file_uuidpb_v1_uuid_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_uuidpb_v1_uuid_proto_goTypes = []any{
-	(*UUID)(nil), // 0: uuidpb.v1.UUID
+var file_uuid_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_uuid_proto_goTypes = []any{
+	(*UUID)(nil), // 0: wuchieh.uuidpb.UUID
 }
-var file_uuidpb_v1_uuid_proto_depIdxs = []int32{
+var file_uuid_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -97,26 +98,26 @@ var file_uuidpb_v1_uuid_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_uuidpb_v1_uuid_proto_init() }
-func file_uuidpb_v1_uuid_proto_init() {
-	if File_uuidpb_v1_uuid_proto != nil {
+func init() { file_uuid_proto_init() }
+func file_uuid_proto_init() {
+	if File_uuid_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_uuidpb_v1_uuid_proto_rawDesc), len(file_uuidpb_v1_uuid_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_uuid_proto_rawDesc), len(file_uuid_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   1,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_uuidpb_v1_uuid_proto_goTypes,
-		DependencyIndexes: file_uuidpb_v1_uuid_proto_depIdxs,
-		MessageInfos:      file_uuidpb_v1_uuid_proto_msgTypes,
+		GoTypes:           file_uuid_proto_goTypes,
+		DependencyIndexes: file_uuid_proto_depIdxs,
+		MessageInfos:      file_uuid_proto_msgTypes,
 	}.Build()
-	File_uuidpb_v1_uuid_proto = out.File
-	file_uuidpb_v1_uuid_proto_goTypes = nil
-	file_uuidpb_v1_uuid_proto_depIdxs = nil
+	File_uuid_proto = out.File
+	file_uuid_proto_goTypes = nil
+	file_uuid_proto_depIdxs = nil
 }
